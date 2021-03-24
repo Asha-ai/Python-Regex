@@ -125,3 +125,32 @@ reg = re.compile("\n")    # play with \b-backspace, \f - formfeed , \r -  carria
 rand = reg.sub(" ",randstr)
 print(rand)   #  please keep it safely in your home 
 
+# Example: 10
+# find matches - using re.findall()
+import re
+reanst = "98765abc##$ "
+print("matches numbers:" , len(re.findall("\d",reanst))) # O/P - matches: 5
+print("matches except numbers",len(re.findall("\D",reanst))) # matches except numbers 7
+print("matches numbers:" , len(re.findall("\d{5}",reanst))) # O/P - matches: 1
+
+# Example 11:
+# find range of matches
+import re
+num = "1234 2345 3456 4567 568"
+print("match range of numbers",len(re.findall("\d{4,7}",num))) # o/p -match range of numbers 4
+
+# match phn no
+# Example 12:  
+import re
+ph = "234-235-1234"
+if re.search("\w{3}-\w{3}-\w{3}",ph): #play with other patterns and can replace with d , add some numbers letters to "ph" and see the errs
+    print("Phnumber matched") # o/p
+    
+ # Example 13
+# check full name
+import re
+if re.search("\w{2,20}\s\w{2,20}","Asha Ponnada"):
+    print("full name is valid") # o/p :full name is valid
+    
+  
+

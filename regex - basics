@@ -84,9 +84,19 @@ st_pat = "mad had bad cad"
 allst1 = re.findall("[b-h]ad",st_pat) # match series of range of characters
 print(allst1)    # o/p : ['had', 'bad', 'cad']
 
+# Example : 6
 ## match the range except use ^ caret symbol
 st_pat = "mad had bad cad"
 allst2 = re.findall("[^b-h]ad",st_pat) # print words the range except b-h
 print(allst2)  #o/p : ['mad']
 
 # Note: play with by giving capitals and smalls and other techniques, like change and see te ranges etc
+
+# Example :7  replace a word
+# re.compile and re.sub()
+import re
+f = "mat,cat,rat"
+reg = re.compile("[r]at")
+reg 
+fd = reg.sub("foot",f)
+fd   # substitured food in the place of rat # o/p  : mat,cat,foot

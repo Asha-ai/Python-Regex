@@ -33,6 +33,14 @@ age = re.findall(r'[A-Z][a-z]',nameage) # if you dont give * it is reading only 
 print(names)
 print(age)
 
+# Example :6 - findall() for list of words
+offr = "we are offering services as poa,poc"
+find=["offering","poa"]
+words=re.findall("\w+",offr)
+result=[x for x in find if x in words]
+result
+
+
 #create dict
 ageDict1 = {}
 x = 0

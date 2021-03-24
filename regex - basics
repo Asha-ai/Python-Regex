@@ -64,3 +64,21 @@ for i in re.finditer("service",st):
   l = i
   print(loct)
   print(i)
+  
+ # Example -5 : re.findall()
+ # match words with particy=ular pattern
+st_pat = "mad had bad cad"
+allst = re.findall("[mhbc]ad",st_pat) # o/p : ['mad', 'had', 'bad', 'cad']
+print(allst)
+
+## match from to 
+st_pat = "mad had bad cad"   
+allst1 = re.findall("[b-h]ad",st_pat) # match series of range of characters
+print(allst1)    # o/p : ['had', 'bad', 'cad']
+
+## match the range except use ^ caret symbol
+st_pat = "mad had bad cad"
+allst2 = re.findall("[^b-h]ad",st_pat) # print words the range except b-h
+print(allst2)  #o/p : ['mad']
+
+# Note: play with by giving capitals and smalls and other techniques, like change and see te ranges etc

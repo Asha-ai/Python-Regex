@@ -18,3 +18,24 @@ for i in names:
   ageDict[i] = ages[x]
   x = x+1
 print(ageDict)  # o/p  {'Asha': '32', 'Charan': '5', 'Veera': '38', 'Ragchav': '9'}
+
+# Play arround
+# play with this by changing differnt formats - and try new
+import re
+nameage = '''
+Asha 33 and Charan 6
+Veera 35 and Ragchav 8
+'''
+names = re.findall(r'\d{1,2}',nameage) # if we give only 2 it is able to give right answer , try other ways
+age = re.findall(r'[A-Z][a-z]',nameage) # if you dont give * it is reading only two alphabets
+
+print(names)
+print(age)
+
+#create dict
+ageDict1 = {}
+x = 0
+for i in names:
+  ageDict1[i] = age[x]
+  x= x+1
+print(ageDict1)  

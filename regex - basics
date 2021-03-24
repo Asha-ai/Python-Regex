@@ -1,3 +1,4 @@
+# Example :1 - re.findall()
 # Extract names and ages using Regex
 import re
 nameage = '''
@@ -39,3 +40,27 @@ for i in names:
   ageDict1[i] = age[x]
   x= x+1
 print(ageDict1)  
+
+
+# Example -2
+## re.serach()
+# re.search()
+# Find word in a string
+import re
+if re.search('services',"we are offering services like ppa,pna and poa telecomservices "):
+        print("services is there")
+        
+# Example -3 : re.findall() 
+# re.findall() - to get print all search words in text
+ser = re.findall('service',"we are offering services like ppa,pna and poa telecomservices")
+for i in ser:
+  print(i)
+
+# Example -4 : re.finditer()
+# get starting and ending index of a string
+st = "we are offering services like ppa,pna and poa telecomservices"
+for i in re.finditer("service",st):
+  loct = i.span()
+  l = i
+  print(loct)
+  print(i)

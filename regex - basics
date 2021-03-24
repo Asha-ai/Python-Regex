@@ -110,3 +110,18 @@ print(back) # o/p : here is \with me
 import re
 back = "here is \\with me "
 re.search(r"\\with me",back) # o/p : <re.Match object; span=(8, 16), match='\\with me'>
+
+# Example: 9
+# replace new lines with space using re.compile(), sub()
+import re
+randstr = '''
+please keep it
+safely
+in your home
+'''
+print(randstr)  # got new lines as seen in the input
+# replace new lines with spaces or something
+reg = re.compile("\n")    # play with \b-backspace, \f - formfeed , \r -  carriage return, \t - tab, \v - vertical tab
+rand = reg.sub(" ",randstr)
+print(rand)   #  please keep it safely in your home 
+

@@ -100,3 +100,13 @@ reg = re.compile("[r]at")
 reg 
 fd = reg.sub("foot",f)
 fd   # substitured food in the place of rat # o/p  : mat,cat,foot
+
+# Example :8
+# re.search() - back slash problem
+import re
+back = "here is \\with me "
+print(back) # o/p : here is \with me 
+# solve this back slash problem using 
+import re
+back = "here is \\with me "
+re.search(r"\\with me",back) # o/p : <re.Match object; span=(8, 16), match='\\with me'>
